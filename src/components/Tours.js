@@ -1,6 +1,7 @@
 import React from "react";
 import { tours } from "../data";
 import Title from "./Title";
+import Tour from "./Tour";
 
 const Tours = () => {
   return (
@@ -9,30 +10,7 @@ const Tours = () => {
 
       <div className="section-center featured-center">
         {tours.map((tour) => {
-          const { id, img, date, title, info, duration, location, price } =
-            tour;
-          return (
-            <article className="tour-card" key={id}>
-              <div className="tour-img-container">
-                <img src={img} className="tour-img" alt={title} />
-                <p className="tour-date">{date}</p>
-              </div>
-              <div className="tour-info">
-                <h4>{title}</h4>
-                <p>{info}</p>
-                <div className="tour-footer">
-                  <p>
-                    <span>
-                      <i className="fas fa-map"></i>
-                    </span>
-                    {location}
-                  </p>
-                  <p>{duration} days</p>
-                  <p>from ${price}</p>
-                </div>
-              </div>
-            </article>
-          );
+          return <Tour key={tour.id} {...tour} />;
         })}
       </div>
     </section>
