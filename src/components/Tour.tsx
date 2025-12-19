@@ -1,6 +1,24 @@
 import React from "react";
 
-const Tour = ({ img, date, title, info, duration, location, price }) => {
+interface TourProps {
+  img: string;
+  date: string;
+  title: string;
+  info: string;
+  duration: number;
+  location: string;
+  price: number;
+}
+
+const Tour = ({
+  img,
+  date,
+  title,
+  info,
+  duration,
+  location,
+  price,
+}: TourProps) => {
   return (
     <article className="tour-card">
       <div className="tour-img-container">

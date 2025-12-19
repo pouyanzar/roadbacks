@@ -1,6 +1,9 @@
-import React from "react";
-
-const SocialLink = ({ href, icon, itemClass }) => {
+interface SocialLinkProps {
+  href: string;
+  icon: string;
+  itemClass?: string;
+}
+const SocialLink = ({ href, icon, itemClass }: SocialLinkProps) => {
   return (
     <li>
       <a href={href} target="_blank" rel="noreferrer" className={itemClass}>

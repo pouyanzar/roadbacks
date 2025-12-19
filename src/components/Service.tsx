@@ -1,6 +1,10 @@
 import React from "react";
-
-const Service = ({ icon, title, text }) => {
+interface ServiceProps {
+  icon: string;
+  title: string;
+  text: string;
+}
+const Service = ({ icon, title, text }: ServiceProps) => {
   return (
     <article className="service">
       <span className="service-icon">

@@ -1,8 +1,11 @@
 import React from "react";
 import { socialLinks } from "../data";
 import SocialLink from "./SocialLink";
-
-const SocialLinks = ({ parentClass, itemClass }) => {
+interface SocialLinksProps {
+  parentClass: string;
+  itemClass: string;
+}
+const SocialLinks = ({ parentClass, itemClass }: SocialLinksProps) => {
   return (
     <ul className={parentClass}>
       {socialLinks.map((link) => {

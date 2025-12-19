@@ -1,6 +1,9 @@
 import React from "react";
-
-const Title = ({ title, subtitle }) => {
+interface TitleProps {
+  title: string;
+  subtitle: string;
+}
+const Title = ({ title, subtitle }: TitleProps) => {
   return (
     <div className="section-title">
       <h2>
